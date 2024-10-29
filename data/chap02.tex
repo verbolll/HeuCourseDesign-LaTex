@@ -1,144 +1,81 @@
 % !TeX root = ../thuthesis-example.tex
 
-\chapter{图表示例}
+\chapter{固体火箭发动机课程设计}
 
-\section{插图}
+装药是指填入燃烧室的推进剂药柱，它的形状和尺寸对发动机的性能至关重要。装药的几何特征直接影响燃气的生成速率和变化规律，从而决定了发动机推力和压力随时间的变化。
 
-图片通常在 \env{figure} 环境中使用 \cs{includegraphics} 插入，如图~\ref{fig:example} 的源代码。
-建议矢量图片使用 PDF 格式，比如数据可视化的绘图；
-照片应使用 JPG 格式；
-其他的栅格图应使用无损的 PNG 格式。
-注意，LaTeX 不支持 TIFF 格式；EPS 格式已经过时。
+\section{课程设计的内容}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\linewidth]{example-image-a.pdf}
-  \caption*{国外的期刊习惯将图表的标题和说明文字写成一段，需要改写为标题只含图表的名称，其他说明文字以注释方式写在图表下方，或者写在正文中。}
-  \caption{示例图片标题}
-  \label{fig:example}
-\end{figure}
+\begin{enumerate}[leftmargin=2em]
+    \item 装药药形选择；
+    \item 按给定的原始参数计算装药尺寸（多组）；
+    \item 给出燃面变化规律（通过曲线给出，肉厚步长取1mm）；
+    \item 计算对应装药无侵蚀燃烧时的发动机工作$p_{t}$曲线；
+    \item 计算对应装药有侵蚀燃烧时的发动机工作$p_{t}$曲线；
+    \item 分析侵蚀燃烧对内弹道的影响；
+    \item 通过内弹道分析和装药性能分析确定一种装药。
+\end{enumerate}
+\section{固体火箭发动机设计详细参数要求}
 
-若图或表中有附注，采用英文小写字母顺序编号，附注写在图或表的下方。
-国外的期刊习惯将图表的标题和说明文字写成一段，需要改写为标题只含图表的名称，其他说明文字以注释方式写在图表下方，或者写在正文中。
-
-如果一个图由两个或两个以上分图组成时，各分图分别以 (a)、(b)、(c)...... 作为图序，并须有分图题。
-推荐使用 \pkg{subcaption} 宏包来处理， 比如图~\ref{fig:subfig-a} 和图~\ref{fig:subfig-b}。
-
-\begin{figure}
-  \centering
-  \subcaptionbox{分图 A\label{fig:subfig-a}}
-    {\includegraphics[width=0.35\linewidth]{example-image-a.pdf}}
-  \subcaptionbox{分图 B\label{fig:subfig-b}}
-    {\includegraphics[width=0.35\linewidth]{example-image-b.pdf}}
-  \caption{多个分图的示例}
-  \label{fig:multi-image}
-\end{figure}
-
-
-
-\section{表格}
-
-表应具有自明性。为使表格简洁易读，尽可能采用三线表，如表~\ref{tab:three-line}。
-三条线可以使用 \pkg{booktabs} 宏包提供的命令生成。
+\subsection{装药几何参数}
 
 \begin{table}
   \centering
-  \caption{三线表示例}
+  \caption{装药几何参数}
   \begin{tabular}{ll}
     \toprule
-    文件名          & 描述                         \\
+    相关几何参数          & 要求                         \\
     \midrule
-    thuthesis.dtx   & 模板的源文件，包括文档和注释 \\
-    thuthesis.cls   & 模板文件                     \\
-    thuthesis-*.bst & BibTeX 参考文献表样式文件    \\
+    外径   & 230～300mm \\
+    长度   & 1300~1800mm                     \\
+    总冲   & 不小于230kN·s    \\
+    最大推力   & 38～72kN    \\
+    平均推力   & 35～65kN    \\
+    最小推力   & 31～58kN    \\
+    平均工作时间   & 4～7s    \\
+    工作环境温度   & 20℃    \\
+
     \bottomrule
   \end{tabular}
   \label{tab:three-line}
 \end{table}
 
-表格如果有附注，尤其是需要在表格中进行标注时，可以使用 \pkg{threeparttable} 宏包。
-研究生要求使用英文小写字母 a、b、c……顺序编号，本科生使用圈码 ①、②、③……编号。
+\subsection{进剂种类选择}
 
-\begin{table}
-  \centering
-  \begin{threeparttable}[c]
-    \caption{带附注的表格示例}
-    \label{tab:three-part-table}
-    \begin{tabular}{ll}
-      \toprule
-      文件名                 & 描述                         \\
-      \midrule
-      thuthesis.dtx\tnote{a} & 模板的源文件，包括文档和注释 \\
-      thuthesis.cls\tnote{b} & 模板文件                     \\
-      thuthesis-*.bst        & BibTeX 参考文献表样式文件    \\
-      \bottomrule
-    \end{tabular}
-    \begin{tablenotes}
-      \item [a] 可以通过 xelatex 编译生成模板的使用说明文档；
-        使用 xetex 编译 \file{thuthesis.ins} 时则会从 \file{.dtx} 中去除掉文档和注释，得到精简的 \file{.cls} 文件。
-      \item [b] 更新模板时，一定要记得编译生成 \file{.cls} 文件，否则编译论文时载入的依然是旧版的模板。
-    \end{tablenotes}
-  \end{threeparttable}
-\end{table}
+在附录A表1~3中选取。
 
-如某个表需要转页接排，可以使用 \pkg{longtable} 宏包，需要在随后的各页上重复表的编号。
-编号后跟表题（可省略）和“（续）”，置于表上方。续表均应重复表头。
+\subsection{壳体材料选择}
 
-\begin{longtable}{cccc}
-    \caption{跨页长表格的表题}
-    \label{tab:longtable} \\
-    \toprule
-    表头 1 & 表头 2 & 表头 3 & 表头 4 \\
-    \midrule
-  \endfirsthead
-    \caption*{续表~\thetable\quad 跨页长表格的表题} \\
-    \toprule
-    表头 1 & 表头 2 & 表头 3 & 表头 4 \\
-    \midrule
-  \endhead
-    \bottomrule
-  \endfoot
-  Row 1  & & & \\
-  Row 2  & & & \\
-  Row 3  & & & \\
-  Row 4  & & & \\
-  Row 5  & & & \\
-  Row 6  & & & \\
-  Row 7  & & & \\
-  Row 8  & & & \\
-  Row 9  & & & \\
-  Row 10 & & & \\
-\end{longtable}
+\thusetup{
+  cite-style = inline,
+}
 
+参见参考资料\citep{wangyouyuan}。
 
+\section{侵蚀燃烧的计算}
 
-\section{算法}
+\subsection{星型装药}
 
-算法环境可以使用 \pkg{algorithms} 或者 \pkg{algorithm2e} 宏包。
+对于星型装药，我们采用æ准则拟合沿装药长度平均侵蚀比：
+\[
+    \overline{\varepsilon }=\overline{\varepsilon }\left( \varphi \right) =\left\{ \begin{matrix}
+        1&		(\varphi \le 72.9)\\
+        1.3128-1.3249\times 10^{-2}\varphi +1.5527\times 10^{-4}\varphi ^2-4.3868\times 10^{-7}\varphi ^3&		(\varphi >72.9)\\
+    \end{matrix} \right. 
+\]
 
-\renewcommand{\algorithmicrequire}{\textbf{输入：}\unskip}
-\renewcommand{\algorithmicensure}{\textbf{输出：}\unskip}
+式中：$\varphi$——燃通比，$\varphi=A_{b}/A{p}$
 
-\begin{algorithm}
-  \caption{Calculate $y = x^n$}
-  \label{alg1}
-  \small
-  \begin{algorithmic}
-    \REQUIRE $n \geq 0$
-    \ENSURE $y = x^n$
+\qquad\quad$A_{b}$——燃面，$m^{2}$
 
-    \STATE $y \leftarrow 1$
-    \STATE $X \leftarrow x$
-    \STATE $N \leftarrow n$
+\qquad\quad$A{p}$——通气面积，$m^{2}$
 
-    \WHILE{$N \neq 0$}
-      \IF{$N$ is even}
-        \STATE $X \leftarrow X \times X$
-        \STATE $N \leftarrow N / 2$
-      \ELSE[$N$ is odd]
-        \STATE $y \leftarrow y \times X$
-        \STATE $N \leftarrow N - 1$
-      \ENDIF
-    \ENDWHILE
-  \end{algorithmic}
-\end{algorithm}
+\subsection{多孔装药}
+
+对于多孔装药，我们采用下式拟合沿装药长度平均侵蚀比：
+\[
+    \overline{\varepsilon }=\overline{\varepsilon }\left( \varphi \right) =\left\{ \begin{matrix}
+        1&		(\varphi \le 72.9)\\
+        1.3128-1.3249\times 10^{-2}\varphi +1.5527\times 10^{-4}\varphi ^2-4.3868\times 10^{-7}\varphi ^3&		(\varphi >72.9)\\
+    \end{matrix} \right. 
+\]
