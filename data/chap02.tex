@@ -74,8 +74,12 @@
 
 对于多孔装药，我们采用下式拟合沿装药长度平均侵蚀比：
 \[
-    \overline{\varepsilon }=\overline{\varepsilon }\left( \varphi \right) =\left\{ \begin{matrix}
-        1&		(\varphi \le 72.9)\\
-        1.3128-1.3249\times 10^{-2}\varphi +1.5527\times 10^{-4}\varphi ^2-4.3868\times 10^{-7}\varphi ^3&		(\varphi >72.9)\\
-    \end{matrix} \right. 
+  \overline{\varepsilon }=\overline{\varepsilon }\bigl( p^{\alpha}\lambda ^{\beta} \bigr) =\left\{ \begin{matrix}
+    1&		\bigl( p^{\alpha}\lambda ^{\beta}\le 0.495 \bigr)\\
+    0.4578+0.2986\bigl( p^{\alpha}\lambda ^{\beta} \bigr) +1.6079\bigl( p^{\alpha}\lambda ^{\beta} \bigr) ^2&		\bigl( p^{\alpha}\lambda ^{\beta}>0.495 \bigr)\\
+  \end{matrix} \right. 
 \]
+
+式中：$p$——装药末端压力
+
+\qquad\quad$\lambda $——装药末端速度系数
