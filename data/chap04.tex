@@ -1,76 +1,93 @@
 % !TeX root = ../thuthesis-example.tex
 
-\chapter{引用文献的标注}
+\chapter{装药设计相关知识}
 
-模板支持 BibTeX 和 BibLaTeX 两种方式处理参考文献。
-下文主要介绍 BibTeX 配合 \pkg{natbib} 宏包的主要使用方法。
+\section{推进剂选择原则}
+
+推进剂应具有所需要的能量特性以比冲与密度的乘积来表示的。
+\[
+    I=I_{sp}m_pg=I_{sp}\rho _gg\mathrm{V}_p
+\]
+$V_{p}$一定时，$I_{sp}\rho _g$越大，$I$越大。相反$I$一定时，$I_{sp}\rho _g$越大，$V_{p}$越小，燃烧室体积也越小，燃烧室壳体质量也就越小。$I_{sp}$越大，$m_{p}$越小，发动机总质量也越小。所以，我们要求推进剂应该具有尽量高的能量特性。
+
+\section{药形种类}
+
+目前在发动机中采用的装药有很多，可以按照燃烧面积的变化规律、燃烧表面所处的位置划分，按侧面燃耗药柱划分，按燃烧方向划分。
+
+按照燃烧面积的变化规律划分：
+\begin{itemize}[leftmargin=2em]
+    \item 恒面性药柱增面性药柱
+    \item 减面性药柱
+    \item 增面性药柱
+\end{itemize}
+
+按照燃烧表面所处的位置划分：
+\begin{itemize}[leftmargin=2em]
+    \item 端面燃烧药柱
+    \item 侧面燃烧药柱
+    \item 侧端面同时燃烧药柱
+\end{itemize}
+
+按照侧面燃耗药柱划分：
+\begin{itemize}[leftmargin=2em]
+    \item 外燃药柱
+    \item 内燃药柱
+    \item 内外燃药柱
+\end{itemize}
+
+按照燃烧方向划分：
+\begin{itemize}[leftmargin=2em]
+    \item 一维药柱
+    \item 二维药柱
+    \item 三维药柱
+\end{itemize}
+
+\subsection{一维药柱}
+
+一维药柱即端燃药柱，这种药柱的侧表面及其一端是用包覆层阻燃的。燃烧只在一端进行，燃烧方向垂直于端面，因此是恒面性燃烧的药柱。
+
+一维药柱具有恒面燃烧、工作时间长、装填系数最大、无压力峰、形状简单、制造容易、强度高等优点。但同时也具有推理小、重心偏移大、点火困难等不可避免的缺点。
+
+\subsection{二维药柱}
+
+二维药柱即侧燃药柱，由于侧燃药柱燃烧面积大，能够产生足够大的推力，在固体火箭发动机中被广泛采用。二维药柱种类很多，每种药柱都具有特定的燃烧面变化规律。
+
+\begin{longtable}{c l l}
+    \caption{不同二维药柱优缺点比较}
+    \label{tab:longtable} \\
+    \toprule
+    种类 & \multicolumn{1}{c}{优点} & \multicolumn{1}{c}{缺点}  \\
+    \midrule
+  \endfirsthead
+    \caption*{续表~\thetable\quad 不同二维药柱优缺点比较} \\
+    \toprule
+    种类 & \multicolumn{1}{c}{优点} & \multicolumn{1}{c}{缺点}  \\
+    \midrule
+  \endhead
+    \bottomrule
+  \endfoot
+  
+  \multirow{4}*{管型药柱} & 燃面恒定 & ~\\
+ 
+
+  ~ & 结构简单，易于制造 & 药柱需要支撑装置 \\
 
 
-\section{顺序编码制}
 
-在顺序编码制下，默认的 \cs{cite} 命令同 \cs{citep} 一样，序号置于方括号中，
-引文页码会放在括号外。
-统一处引用的连续序号会自动用短横线连接。
-
-\thusetup{
-  cite-style = super,
-}
-\noindent
-\begin{tabular}{l@{\quad$\Rightarrow$\quad}l}
-  \verb|\cite{zhangkun1994}|               & \cite{zhangkun1994}               \\
-  \verb|\citet{zhangkun1994}|              & \citet{zhangkun1994}              \\
-  \verb|\citep{zhangkun1994}|              & \citep{zhangkun1994}              \\
-  \verb|\cite[42]{zhangkun1994}|           & \cite[42]{zhangkun1994}           \\
-  \verb|\cite{zhangkun1994,zhukezhen1973}| & \cite{zhangkun1994,zhukezhen1973} \\
-\end{tabular}
+  ~ & 无应力集中，强度大 &不可长时间工作 \\
 
 
-也可以取消上标格式，将数字序号作为文字的一部分。
-建议全文统一使用相同的格式。
+  ~ & 无剩药 & \\
 
-\thusetup{
-  cite-style = inline,
-}
-\noindent
-\begin{tabular}{l@{\quad$\Rightarrow$\quad}l}
-  \verb|\cite{zhangkun1994}|               & \cite{zhangkun1994}               \\
-  \verb|\citet{zhangkun1994}|              & \citet{zhangkun1994}              \\
-  \verb|\citep{zhangkun1994}|              & \citep{zhangkun1994}              \\
-  \verb|\cite[42]{zhangkun1994}|           & \cite[42]{zhangkun1994}           \\
-  \verb|\cite{zhangkun1994,zhukezhen1973}| & \cite{zhangkun1994,zhukezhen1973} \\
-\end{tabular}
+  \hline
 
+  管套形药柱 & \begin{tabular}[c]{@{}l@{}}燃面恒定\\无剩药\end{tabular} & 支撑装置的工作条件恶劣\\
+  \hline
+  星形药柱 & \begin{tabular}[c]{@{}l@{}}可获得恒面性、减面性或增面性的燃烧\\工作时间可以很长\\可直接浇注在燃烧室内\\对壳体的刚度有增强作用\end{tabular} & \begin{tabular}[c]{@{}l@{}}药形复杂，药模制造困难\\药柱强度低，易出现裂纹\\有剩药\\推力、压力曲线\\有较长的拖尾现象\end{tabular}  \\
+  \hline
+  车轮形药柱 & \begin{tabular}[c]{@{}l@{}}可获得恒面性、减面性或增面性的燃烧\\工作时间可以很长\\肉厚系数低\\可以得到多推力方案\end{tabular}                                     & \begin{tabular}[c]{@{}l@{}}药柱强度低\\装填系数低，形状更为复杂\end{tabular}                              \\
+  \hline
+  多孔药柱  & 药柱绝热，可采用直接浇注工艺&\\
+\end{longtable}
 
-
-\section{著者-出版年制}
-
-著者-出版年制下的 \cs{cite} 跟 \cs{citet} 一样。
-
-\thusetup{
-  cite-style = author-year,
-}
-\noindent
-\begin{tabular}{@{}l@{$\Rightarrow$}l@{}}
-  \verb|\cite{zhangkun1994}|                & \cite{zhangkun1994}                \\
-  \verb|\citet{zhangkun1994}|               & \citet{zhangkun1994}               \\
-  \verb|\citep{zhangkun1994}|               & \citep{zhangkun1994}               \\
-  \verb|\cite[42]{zhangkun1994}|            & \cite[42]{zhangkun1994}            \\
-  \verb|\citep{zhangkun1994,zhukezhen1973}| & \citep{zhangkun1994,zhukezhen1973} \\
-\end{tabular}
-
-\vskip 2ex
-\thusetup{
-  cite-style = super,
-}
-注意，引文参考文献的每条都要在正文中标注
-\cite{zhangkun1994,zhukezhen1973,dupont1974bone,zhengkaiqing1987,%
-  jiangxizhou1980,jianduju1994,merkt1995rotational,mellinger1996laser,%
-  bixon1996dynamics,mahui1995,carlson1981two,taylor1983scanning,%
-  taylor1981study,shimizu1983laser,atkinson1982experimental,%
-  kusch1975perturbations,guangxi1993,huosini1989guwu,wangfuzhi1865songlun,%
-  zhaoyaodong1998xinshidai,biaozhunhua2002tushu,chubanzhuanye2004,%
-  who1970factors,peebles2001probability,baishunong1998zhiwu,%
-  weinstein1974pathogenic,hanjiren1985lun,dizhi1936dizhi,%
-  tushuguan1957tushuguanxue,aaas1883science,fugang2000fengsha,%
-  xiaoyu2001chubanye,oclc2000about,scitor2000project%
-}。
+  

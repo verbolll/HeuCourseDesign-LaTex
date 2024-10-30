@@ -3673,7 +3673,7 @@
 \thu@option@hook{number-separator}{\thu@set@number@separator}
 %    \end{macrocode}
 %
-% 定制浮动图形和表格标题样式：
+% 定制浮动图形和表格标题样式：更改了这里 
 % \begin{itemize}
 %   \item 图表标题字体为 11pt
 %   \item 去掉图表号后面的冒号，图序与图名文字之间空一个汉字符宽度
@@ -3686,7 +3686,7 @@
     \fontsize{11bp}{15bp}\selectfont
   \else
     \ifthu@language@chinese
-      \fontsize{11bp}{14.3bp}\selectfont
+      \fontsize{11bp}{14.3bp}\selectfont\bfseries
     \else
       \fontsize{11bp}{12.65bp}\selectfont
     \fi
@@ -3712,12 +3712,12 @@
 % 注意不能简单地把行距设为 $\SI{11}{pt} \times 1.3 + \SI{6}{pt} = \SI{20.3}{pt}$，
 % 这会导致含有多行文字的单元格中行距有误。
 %
-% 其他浮动体中（比如 \env{algorithm}）的字号默认同表格一致。
+% 其他浮动体中（比如 \env{algorithm}）的字号默认同表格一致。设置表格字号
 %    \begin{macrocode}
 \newcommand\thu@set@table@font{
   \ifthu@language@chinese
     \def\thu@table@font{%
-      \fontsize{11bp}{14.3bp}\selectfont
+      \fontsize{10.5bp}{14.3bp}\selectfont
       \renewcommand\arraystretch{1.42}%
     }%
   \else
