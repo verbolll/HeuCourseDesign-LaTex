@@ -1,0 +1,184 @@
+% !TeX root = ../thuthesis-example.tex
+
+\chapter{程序筛选}
+
+\section{第一、二次筛选}
+
+将药柱的物理参数信息输入进程序中运行程序，先挑选出满足前两次筛选的药柱。
+满足：
+\[\xi_{2}\le 1.2
+\]
+\[\sin (\varepsilon \frac{\pi }{n} )/y_{1}\le1
+\]
+\[0.75\le\eta\le0.85
+\]
+\[
+\eta _{f} \le 5 \%\]
+\begin{longtable}{c|c|c|c|c|c|c|c}
+    \caption{药柱第一、二次筛选表}
+    \label{tab:longtable} \\
+    \toprule
+    \multirow{2}*{$n$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{合格标记} \\
+    \cline{4-7}
+    & & & $\xi_{2}\le 1.2$& $\sin (\varepsilon \frac{\pi }{n} )/y_{1}\le1$& $0.75\le\eta\le0.85$& $\eta _{f} \le 5 \%$ & \\
+    \midrule
+  \endfirsthead
+    \caption*{续表~\thetable\quad 药柱第一、二次筛选表} \\
+    \toprule
+    \multirow{2}*{$n$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{是否合格} \\
+    \cline{4-7}
+    & & & $\xi_{2}\le 1.2$& $\sin (\varepsilon \frac{\pi }{n} )/y_{1}\le1$& $0.75\le\eta\le0.85$& $\eta _{f} \le 5 \%$ & \\
+    \midrule
+  \endhead
+    \bottomrule
+  \endfoot
+  \multirow{6}*{3} & \multirow{6}*{0.428478} & 0.3& 1.253& & & & \\
+   \cline{3-8}
+   & & 0.4& 1.152& 0.530& 0.786& 2.95& \checkmark\\ 
+   \cline{3-8}
+   & & 0.5& 1.072& 0.651& 0.838& 5.66& \\ 
+   \cline{3-8}
+   & & 0.6& 1.009& 0.766& 0.898& & \\ 
+   \cline{3-8}
+   & & 0.7& 0.962& 0.872& 0.968& & \\ 
+   \cline{3-8}
+   & & 0.8& 0.926& 1.054& 1.046& & \\ 
+   \hline
+
+   \multirow{6}*{4} & \multirow{6}*{0.492532} & 0.3& 1.330& & & & \\ 
+   \cline{3-8}
+   & & 0.4& 1.234& & & & \\ 
+   \cline{3-8}
+   & & 0.5& 1.155& 0.499& 0.787& 3.25& \checkmark\\ 
+   \cline{3-8}
+   & & 0.6& 1.089& 0.592& 0.831& 5.56& \\ 
+   \cline{3-8}
+   & & 0.7& 1.035& 0.681& 0.881& & \\ 
+   \cline{3-8}
+   & & 0.8& 0.991& 0.766& 0.937& & \\ 
+   \hline
+
+   \multirow{6}*{5} & \multirow{6}*{0.543321} & 0.3& 1.384& & & & \\ 
+   \cline{3-8}
+   & & 0.4& 1.294& & & & \\ 
+   \cline{3-8}
+   & & 0.5& 1.218& & & & \\ 
+   \cline{3-8}
+   & & 0.6& 1.153& 0.480& 0.791& 3.61& \checkmark\\ 
+   & & 0.7& 1.097& 0.555& 0.829& 5.68& \\ 
+   \cline{3-8}
+   & & 0.8& 1.050& 0.623& 0.872& & \\ 
+   \hline
+
+   \multirow{6}*{6} & \multirow{6}*{0.585209} & 0.3& 1.424& & & & \\ 
+   \cline{3-8}
+   & & 0.4& 1.340& & & & \\ 
+   \cline{3-8}
+   & & 0.5& 1.267& & & & \\ 
+   \cline{3-8}
+   & & 0.6& 1.204& & & & \\ 
+   \cline{3-8}
+   & & 0.7& 1.148& 0.467& 0.780& 3.98& \checkmark\\ 
+   \cline{3-8}
+   & & 0.8& 1.100& 0.530& 0.830& 5.90& \\ 
+   \hline
+
+   \multirow{6}*{7} & \multirow{6}*{0.620639} & 0.3& 1.456& & & & \\ 
+   \cline{3-8}
+   & & 0.4& 1.376& & & & \\ 
+   \cline{3-8}
+   & & 0.5& 1.307& & & & \\ 
+   \cline{3-8}
+   & & 0.6& 1.245& & & & \\ 
+   \cline{3-8}
+   & & 0.7& 1.191& 0.403& 0.773& 2.95& \checkmark\\ 
+   \cline{3-8}
+   & & 0.8& 1.143& 0.458& 0.801& 4.37& \checkmark\\ 
+   \hline
+
+   \multirow{6}*{8} & \multirow{6}*{0.651182} & 0.3& 1.481& & & & \\ 
+   \cline{3-8}
+   & & 0.4& 1.406& & & & \\ 
+   \cline{3-8}
+   & & 0.5& 1.339& & & & \\ 
+   \cline{3-8}
+   & & 0.6& 1.280& & & & \\ 
+   \cline{3-8}
+   & & 0.7& 1.227& & & & \\ 
+   \cline{3-8}
+   & & 0.8& 1.180& 0.403& 0.780& 3.37& \checkmark\\ 
+
+\end{longtable}
+
+\section{第三次筛选}
+经过一、二次筛选挑出了七种符合要求的药柱。下面进行第三次筛选，挑选出满足$1.3m\leqslant L \leqslant1.8m$的药柱。
+
+\[
+L=\frac{\frac{m_{peff}}{\rho _p}}{A_c-A_p-A_f}
+\]
+
+\begin{longtable}{c|c|c|c|c|c}
+  \caption{药柱第三次筛选表}
+  \label{tab:longtable} \\
+  \toprule
+  $n$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$  &合格标记\\
+  \midrule
+\endfirsthead
+  \caption*{续表~\thetable\quad 药柱第三次筛选表} \\
+  \toprule
+$n$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$& 合格标记\\
+  \midrule
+\endhead
+  \bottomrule
+\endfoot
+ 3& 0.4& 1.182& 1.628 & 1.408& \checkmark\\
+ \hline
+ 4& 0.5& 1.173& 1.408 & 1.410& \checkmark\\ \hline
+
+ 5& 0.6& 1.152& 1.990& 1.410&  \checkmark\\ \hline
+
+ 6& 0.7& 1.126& 2.197& 1.408&  \checkmark\\ \hline
+
+ 7& 0.7& 1.254& 1.625& 1.432& \checkmark \\ \hline
+
+ 7& 0.8& 1.096& 2.412& 1.405& \checkmark\\ \hline
+
+ 8& 0.8& 1.214& 1.857& 1.426& \checkmark \\
+
+\end{longtable}
+
+\section{合格药柱}
+得到最终合格的七组药柱：
+
+\begin{longtable}{c|c|c|c|c|c|c|c}
+  \caption{合格药柱表}
+  \label{tab:longtable} \\
+  \toprule
+  $n$ & $\varepsilon$  & $\theta /2 $(度)  & $s_{0}$ & $s_{r1} $ & $y^{*}$ & $y_{0}^{*}$ & $m_{p}$ \\
+  \midrule
+\endfirsthead
+  \caption*{续表~\thetable\quad 合格药柱表} \\
+  \toprule
+  表头 1 & 表头 2 & 表头 3 & 表头 4 \\
+  \midrule
+\endhead
+  \bottomrule
+\endfoot
+ 3& 0.4& 17.347& 0.782& 0.833& 0.426& 0.447& 107.960\\\hline
+ 4& 0.5& 20.159& 0.782& 0.833& 0.4268& 0.434& 107.417\\\hline
+ 5& 0.6& 22.735& 0.782& 0.833& 0.399& 0.430& 108.869\\\hline
+ 6& 0.7& 25.100& 0.782& 0.833& 0.396& 0.430& 109.378\\\hline
+ 7& 0.7& 23.877& 0.782& 0.833& 0.338& 0.380& 108.022\\\hline
+ 7& 0.8& 27.276& 0.782& 0.833& 0.395& 0.432& 109.901\\\hline
+ 8& 0.8& 26.225& 0.782& 0.833& 0.344& 0.389& 108.590\\
+\end{longtable}
+
+其中$y_{0}^{*}$为星边夹角$\theta =\overline{\theta }
+$时对应的值。
+
+总装药量：
+\[
+m_p=m_f+m_{peff}\]
+\[
+  m_{f}=A_{f}L \rho_{p}
+\]
