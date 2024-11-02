@@ -18,14 +18,14 @@
     \caption{药柱第一、二次筛选表}
     \label{tab:longtable} \\
     \toprule
-    \multirow{2}*{$n$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{合格标记} \\
+    \multirow{2}*{$n^*$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{合格标记} \\
     \cline{4-7}
     & & & $\xi_{2}\le 1.2$& $\sin (\varepsilon \frac{\pi }{n} )/y_{1}\le1$& $0.75\le\eta\le0.85$& $\eta _{f} \le 5 \%$ & \\
     \midrule
   \endfirsthead
     \caption*{续表~\thetable\quad 药柱第一、二次筛选表} \\
     \toprule
-    \multirow{2}*{$n$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{是否合格} \\
+    \multirow{2}*{$n^*$} &\fontsize{14}{14}\selectfont\multirow{2}*{$\frac{\theta }{2} $} &\fontsize{14}{14}\selectfont\multirow{2}*{$\varepsilon$} & \multicolumn{2}{c|}{第一次筛选} & \multicolumn{2}{c|}{第二次筛选} & \multirow{2}*{是否合格} \\
     \cline{4-7}
     & & & $\xi_{2}\le 1.2$& $\sin (\varepsilon \frac{\pi }{n} )/y_{1}\le1$& $0.75\le\eta\le0.85$& $\eta _{f} \le 5 \%$ & \\
     \midrule
@@ -121,12 +121,12 @@ L=\frac{\frac{m_{peff}}{\rho _p}}{A_c-A_p-A_f}
   \caption{药柱第三次筛选表}
   \label{tab:longtable} \\
   \toprule
-  $n$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$  &合格标记\\
+  $n^*$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$  &合格标记\\
   \midrule
 \endfirsthead
   \caption*{续表~\thetable\quad 药柱第三次筛选表} \\
   \toprule
-$n$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$& 合格标记\\
+$n^*$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$& 合格标记\\
   \midrule
 \endhead
   \bottomrule
@@ -150,27 +150,27 @@ $n$  & $\varepsilon$  & $A_{p}\times(10^{-2})$ & $A_{f}\times(10^{-3})$ & $L/m$&
 \section{合格药柱}
 得到最终合格的七组药柱：
 
-\begin{longtable}{c|c|c|c|c|c|c|c}
+\begin{longtable}{c|c|c|c|c|c|c|c|c}
   \caption{合格药柱表}
   \label{tab:longtable} \\
   \toprule
-  $n$ & $\varepsilon$  & $\theta /2 $(度)  & $s_{0}$ & $s_{r1} $ & $y^{*}$ & $y_{0}^{*}$ & $m_{p}$ \\
+   序号&$n^*$ & $\varepsilon$  & $\theta /2 $(度)  & $s_{0}$ & $s_{r1} $ & $y^{*}$ & $y_{0}^{*}$ & $m_{p}$ \\
   \midrule
 \endfirsthead
   \caption*{续表~\thetable\quad 合格药柱表} \\
   \toprule
-  表头 1 & 表头 2 & 表头 3 & 表头 4 \\
+  序号&$n^*$ & $\varepsilon$  & $\theta /2 $(度)  & $s_{0}$ & $s_{r1} $ & $y^{*}$ & $y_{0}^{*}$ & $m_{p}$ \\
   \midrule
 \endhead
   \bottomrule
 \endfoot
- 3& 0.4& 17.347& 0.782& 0.833& 0.426& 0.447& 107.960\\\hline
- 4& 0.5& 20.159& 0.782& 0.833& 0.4268& 0.434& 107.417\\\hline
- 5& 0.6& 22.735& 0.782& 0.833& 0.399& 0.430& 108.869\\\hline
- 6& 0.7& 25.100& 0.782& 0.833& 0.396& 0.430& 109.378\\\hline
- 7& 0.7& 23.877& 0.782& 0.833& 0.338& 0.380& 108.022\\\hline
- 7& 0.8& 27.276& 0.782& 0.833& 0.395& 0.432& 109.901\\\hline
- 8& 0.8& 26.225& 0.782& 0.833& 0.344& 0.389& 108.590\\
+ 1 & 3& 0.4& 17.347& 0.782& 0.833& 0.426& 0.447& 107.960\\\hline
+ 2 & 4& 0.5& 20.159& 0.782& 0.833& 0.408& 0.434& 107.417\\\hline
+ 3 & 5& 0.6& 22.735& 0.782& 0.833& 0.399& 0.430& 108.869\\\hline
+ 4 & 6& 0.7& 25.100& 0.782& 0.833& 0.396& 0.430& 109.378\\\hline
+ 5 & 7& 0.7& 23.877& 0.782& 0.833& 0.338& 0.380& 108.022\\\hline
+ 6 & 7& 0.8& 27.276& 0.782& 0.833& 0.395& 0.432& 109.901\\\hline
+ 7 & 8& 0.8& 26.225& 0.782& 0.833& 0.344& 0.389& 108.590\\
 \end{longtable}
 
 其中$y_{0}^{*}$为星边夹角$\theta =\overline{\theta }
